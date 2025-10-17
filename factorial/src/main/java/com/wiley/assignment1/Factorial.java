@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class Factorial {
 	
-	 private Scanner scanner;
-	 private PrintStream printStream;
+	 private final Scanner scanner;
+	 private final PrintStream printStream;
 	 private int num;
 	 
 
@@ -40,6 +40,7 @@ public class Factorial {
             num = Integer.parseInt(input);
         } catch (NumberFormatException e) {
             this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+            return -1;
         }
 
         if (num >= 1 && num <= 10) {
